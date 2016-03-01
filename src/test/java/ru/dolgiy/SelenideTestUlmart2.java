@@ -29,6 +29,7 @@ public class SelenideTestUlmart2 {
 
         LoginPage loginPage = page(LoginPage.class);
         loginPage.putLoginInfo();
+        loginPage.confirmLoinInfo();
 
 
         CheckOutPage checkOutPage = page(CheckOutPage.class);
