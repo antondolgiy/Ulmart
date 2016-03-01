@@ -7,10 +7,16 @@ import static com.codeborne.selenide.Selenide.sleep;
  */
 public class LoginPage {
     public void putLoginInfo(){
+
+        if($(By.xpath("html/body//form/fieldset/div[5]//button")).isDisplayed()){
         $(By.xpath(".//*[@id='ctrl5']")).setValue("antondolgiy@mail.ru");
         $(By.xpath(".//*[@id='enter_password']")).setValue("ytrewq12");
         sleep(10000);
         // !! enter captcha manualy before it click!
-        $(By.xpath("html/body//form/fieldset/div[5]//button")).click();
+        }
+    }
+    public void confirmLoinInfo(){
+        if($(By.xpath("html/body//form/fieldset/div[5]//button")).isDisplayed()){
+        $(By.xpath("html/body//form/fieldset/div[5]//button")).click();}
     }
 }

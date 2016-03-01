@@ -10,8 +10,9 @@ public class HomePage {
 
     public void clickElementByX (String xpath)
     {
+        if ($(By.xpath(xpath)).isDisplayed()){
         $(By.xpath(xpath)).click();
-        sleep(5000);
+        sleep(5000);}
     }
 
     public void chooseCategory (String category)

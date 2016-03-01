@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.page;
 import com.codeborne.selenide.SelenideElement;
 import java.util.List;
+import org.openqa.selenium.*;
 
 /**
  * Created by Anton on 26.02.2016.
@@ -14,6 +15,7 @@ import java.util.List;
 public class SelenideTestUlmart {
     @Test
     public void orderProccessor() {
+
 
         HomePage homepage = Selenide.open("http://www.ulmart.ru/", HomePage.class);
         homepage.clickElementByX(".//*[@id='cityOk']");
@@ -31,6 +33,7 @@ public class SelenideTestUlmart {
 
         LoginPage loginPage = page(LoginPage.class);
         loginPage.putLoginInfo();
+        loginPage.confirmLoinInfo();
 
 
         CheckOutPage checkOutPage = page(CheckOutPage.class);
