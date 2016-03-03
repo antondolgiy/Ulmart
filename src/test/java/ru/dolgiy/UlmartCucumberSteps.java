@@ -75,7 +75,7 @@ public class UlmartCucumberSteps {
     public void i_do_login()  {
         loginPage.putLoginInfo();
 
-    assertTrue($(By.xpath(".//*[@id='captchaInput']")).is(Condition.not(Condition.empty)));
+    assertTrue("ENTER KAPCHA MANUALY",$(By.xpath(".//*[@id='captchaInput']")).is(Condition.not(Condition.empty)));
 
         loginPage.confirmLoinInfo();
 
